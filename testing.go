@@ -1,9 +1,4 @@
-package testingext
-
-// These functions cannot be in the main stdext package because of the impact
-// that will have on commands importing stdext. See:
-//
-// https://stackoverflow.com/questions/37240065/some-how-all-sorts-of-test-argument-flags-showing-up-in-go-program-usage
+package testext
 
 import (
 	"testing"
