@@ -21,7 +21,9 @@ func HookedSubtestRunner(t *testing.T, beforeEach func(), afterEach func()) func
 			t.Log("Calling hook [beforeEach]")
 			beforeEach()
 		}
+
 		t.Run(name, subtest)
+
 		if afterEach != nil {
 			t.Log("Calling hook [afterEach]")
 			afterEach()
