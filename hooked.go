@@ -18,14 +18,14 @@ func HookedSubtestRunner(t *testing.T, beforeEach func(), afterEach func()) func
 	return func(name string, subtest func(*testing.T)) {
 		t.Helper()
 		if beforeEach != nil {
-			t.Log("Calling [beforeEach] hook", beforeEach)
+			t.Log("Calling [beforeEach] hook", beforeEach) // nolint: vet
 			beforeEach()
 		}
 
 		t.Run(name, subtest)
 
 		if afterEach != nil {
-			t.Log("Calling [afterEach] hook", afterEach)
+			t.Log("Calling [afterEach] hook", afterEach) // nolint: vet
 			afterEach()
 		}
 	}
